@@ -8,7 +8,7 @@
     tools:context=".MainActivity">
 
     <EditText
-        android:id="@+id/estatura"
+        android:id="@+id/txtestatura"
         android:layout_width="299dp"
         android:layout_height="58dp"
         android:layout_marginStart="56dp"
@@ -16,14 +16,14 @@
         android:layout_marginTop="32dp"
         android:ems="10"
         android:fontFamily="@font/advent_pro"
+        android:hint="@string/estatura"
         android:inputType="number"
-        android:text="@string/estatura"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/peso"
+        android:id="@+id/txtpeso"
         android:layout_width="299dp"
         android:layout_height="58dp"
         android:layout_marginStart="56dp"
@@ -31,23 +31,24 @@
         android:layout_marginTop="112dp"
         android:ems="10"
         android:fontFamily="@font/advent_pro"
+        android:hint="@string/peso"
         android:inputType="number"
-        android:text="@string/peso"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/btnCalcular"
         android:layout_width="197dp"
         android:layout_height="62dp"
         android:layout_marginStart="104dp"
         android:layout_marginLeft="104dp"
         android:layout_marginTop="296dp"
-        android:background="@color/button"
+        android:background="@android:drawable/btn_default_small"
         android:fontFamily="@font/amaranth"
         android:text="@string/calcular"
         android:textSize="24sp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
+
 </androidx.constraintlayout.widget.ConstraintLayout>

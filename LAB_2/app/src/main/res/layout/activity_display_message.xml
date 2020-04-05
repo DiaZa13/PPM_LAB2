@@ -13,7 +13,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
         android:layout_marginLeft="152dp"
-        android:layout_marginTop="376dp"
+        android:layout_marginTop="316dp"
         android:fontFamily="@font/advent_pro"
         android:text="TextView"
         android:textSize="30sp"
@@ -35,13 +35,13 @@
 
     <ImageView
         android:id="@+id/imageView"
-        android:layout_width="172dp"
-        android:layout_height="185dp"
-        android:layout_marginStart="116dp"
-        android:layout_marginLeft="116dp"
-        android:layout_marginTop="152dp"
+        android:layout_width="161dp"
+        android:layout_height="144dp"
+        android:layout_marginStart="124dp"
+        android:layout_marginLeft="124dp"
+        android:layout_marginTop="148dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:srcCompat="@mipmap/Ideal" />
+        app:srcCompat="@mipmap/sobrepeso" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
