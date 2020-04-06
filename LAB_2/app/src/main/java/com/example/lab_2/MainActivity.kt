@@ -8,6 +8,7 @@ import android.widget.EditText
 import android.widget.Toast
 import kotlinx.android.synthetic.main.activity_main.*
 import org.w3c.dom.Text
+import kotlin.math.pow
 
 class MainActivity : AppCompatActivity() {
 
@@ -36,7 +37,7 @@ class MainActivity : AppCompatActivity() {
             Toast.makeText(this, "Por favor ingrese un valor entre 1 y 270", Toast.LENGTH_SHORT).show()
         }else {
 
-            var imc = (peso / 2.25) / ((estatura * estatura) / 100)
+            var imc = (peso / 2.205) / ((estatura/100).pow(2))
             var numero = "%.2f".format(imc)
             val intent = Intent(this, DisplayMessageActivity::class.java)
             intent.putExtra("IMC", numero)
