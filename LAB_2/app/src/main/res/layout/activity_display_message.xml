@@ -8,7 +8,7 @@
     tools:context=".DisplayMessageActivity">
 
     <TextView
-        android:id="@+id/txtMensaje"
+        android:id="@+id/txtMensaje2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
@@ -21,7 +21,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/txtMensaje2"
+        android:id="@+id/txtMensaje1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="152dp"
@@ -34,7 +34,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <ImageView
-        android:id="@+id/imageView"
+        android:id="@+id/IMC_Image"
         android:layout_width="161dp"
         android:layout_height="144dp"
         android:layout_marginStart="124dp"
