@@ -16,7 +16,6 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-
         btnCalcular.setOnClickListener(){
             calcular()
         }
@@ -28,29 +27,22 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun calcular() {
+        var peso = txtpeso.text.toString().toDoubleOrNull()
+        var estatura = txtestatura.text.toString().toDoubleOrNull()
 
-        var peso = txtpeso.text.toString().toDouble()
-        var mass = peso/2.205
-        var estatura = txtestatura.text.toString().toDouble()
-        var height = estatura/100
-        var imc = mass/(height*height)
+        if(peso == null || estatura == null){
+            Toast.makeText(this, "Por favor ingrese un valor en el espacio proporcionado", Toast.LENGTH_SHORT).show()
+        }else if(peso > 270 || estatura > 270 || peso < 1 || estatura < 1 ){
+            Toast.makeText(this, "Por favor ingrese un valor entre 1 y 270", Toast.LENGTH_SHORT).show()
+        }else {
 
-        var IMC : String = ""
-        if(imc < 18.5){
-            IMC = 1.toString()
-        }else if(imc < 25){
-            IMC = 2.toString()
-        }else if(imc < 30){
-            IMC = 3.toString()
-        }else{
-            IMC = 4.toString()
+            var imc = (peso / 2.25) / ((estatura * estatura) / 100)
+            var numero = "%.2f".format(imc)
+            val intent = Intent(this, DisplayMessageActivity::class.java)
+            intent.putExtra("IMC", numero)
+            startActivity(intent)
+            finish() // finaliza una actividad
         }
-
-
-        val intent = Intent(this, DisplayMessageActivity::class.java)
-        intent.putExtra("IMC",IMC)
-        startActivity(intent)
-        //finish() // finaliza una actividad
     }
 
 }
